@@ -1,0 +1,195 @@
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/gridLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:columnCount="2"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:useDefaultMargins="true"
+    tools:context="com.muath.mortgagecalculator.MainActivity" >
+    
+    <TextView
+            android:id="@+id/purchasePriceTextView"
+            android:layout_gravity="center_vertical|end"
+            android:labelFor="@+id/purchasePriceEditText"
+            android:text="@string/purchasePrice"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:id="@+id/purchasePriceEditText"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_gravity="fill_horizontal"
+            android:layout_row="0"
+            android:digits="0123456789"
+            android:inputType="numberDecimal"
+            android:maxLength="@integer/max_number"
+            android:padding="@dimen/padding_textViews" >
+
+            <requestFocus />
+        </EditText>
+
+        <TextView
+            android:id="@+id/purchasePriceDisplayTextView"
+            android:layout_column="1"
+            android:layout_gravity="fill_horizontal|end"
+            android:layout_row="0"
+            android:background="@android:color/holo_blue_bright"
+            android:gravity="start"
+            android:padding="@dimen/padding_textViews"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/downPaymentTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|end"
+            android:labelFor="@+id/downPaymentEditText"
+            android:text="@string/downPayment"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:id="@+id/downPaymentEditText"
+            android:layout_column="1"
+            android:layout_gravity="fill_horizontal|start"
+            android:layout_row="1"
+            android:digits="0123456789"
+            android:inputType="numberDecimal"
+            android:maxLength="@integer/max_number"
+            android:padding="@dimen/padding_textViews" />
+
+        <TextView
+            android:id="@+id/downPaymentDisplayTextView"
+            android:layout_column="1"
+            android:layout_gravity="fill_horizontal|end"
+            android:layout_row="1"
+            android:background="@android:color/holo_blue_bright"
+            android:maxLength="@integer/max_number"
+            android:padding="@dimen/padding_textViews"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/loanAmountTextView"
+            android:layout_gravity="center_vertical|end"
+            android:text="@string/loanAmount"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@android:color/holo_red_dark" />
+
+        <TextView
+            android:id="@+id/loanAmountDisplayTextView"
+            android:layout_gravity="fill_horizontal|start"
+            android:background="@android:color/holo_orange_light"
+            android:gravity="start"
+            android:padding="@dimen/padding_textViews"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/interestRateTextView"
+            android:layout_gravity="center_vertical|end"
+            android:labelFor="@+id/interestRateEditText"
+            android:text="@string/interestRate"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:id="@+id/interestRateEditText"
+            android:layout_column="1"
+            android:layout_gravity="fill_horizontal|start"
+            android:layout_row="3"
+            android:digits="0123456789"
+            android:inputType="numberDecimal"
+            android:maxLength="@integer/percentMax"
+            android:padding="@dimen/padding_textViews" />
+
+        <TextView
+            android:id="@+id/interestRateDisplayTextView"
+            android:layout_column="1"
+            android:layout_gravity="fill_horizontal|start"
+            android:layout_row="3"
+            android:background="@android:color/holo_blue_bright"
+            android:padding="@dimen/padding_textViews"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/monthlyPaymentsTextView"
+            android:layout_columnSpan="2"
+            android:layout_gravity="center"
+            android:text="@string/monthlyPayment"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:id="@+id/customPeriodTextView"
+            android:layout_width="wrap_content"
+            android:layout_gravity="end"
+            android:text="@string/for5Years"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@android:color/holo_red_dark" />
+
+        <TextView
+            android:id="@+id/customPeriodDisplayTextView"
+            android:layout_gravity="fill_horizontal|start"
+            android:background="@android:color/holo_orange_light"
+            android:padding="@dimen/padding_textViews"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <SeekBar
+            android:id="@+id/customPeriodSeekBar"
+            android:layout_width="match_parent"
+            android:layout_columnSpan="2"
+            android:layout_gravity="fill_horizontal"
+            
+            android:max="49"
+            android:progress="4" />
+
+        <TextView
+            android:id="@+id/tenYearsTextView"
+            android:layout_gravity="end"
+            android:text="@string/for10Years"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@android:color/holo_red_dark" />
+
+        <TextView
+            android:id="@+id/tenYearsDisplayTextView"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill_horizontal|start"
+            android:background="@android:color/holo_orange_light"
+            android:gravity="center_vertical"
+            android:padding="@dimen/padding_textViews"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/twintyYearsTextView"
+            android:layout_gravity="end"
+            android:text="@string/for20Years"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@android:color/holo_red_dark" />
+
+        <TextView
+            android:id="@+id/twintyYearsDisplayTextView"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill_horizontal|start"
+            android:background="@android:color/holo_orange_light"
+            android:gravity="start"
+            android:padding="@dimen/padding_textViews"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/thirtyYearsTextView"
+            android:layout_gravity="end"
+            android:text="@string/for30Years"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@android:color/holo_red_dark" />
+
+        <TextView
+            android:id="@+id/thirtyYearsDisplayTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill_horizontal|start"
+            android:background="@android:color/holo_orange_light"
+            android:padding="@dimen/padding_textViews"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+
+</GridLayout>
